@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <conio.h>
+
+using namespace std;
+
+void giveTemperature(int* ProvinceA, int* ProvinceB, int* ProvinceC)
+{
+	cout << " Please give all temperature you have gathered for a week of Province A, Province B, and Province C \n \n";
+
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province A: Day " << v << ":";
+		cin >> ProvinceA[v];
+	}
+	cout << "" << endl;
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province B: Day " << v << ":";
+		cin >> ProvinceB[v];
+	}
+	cout << "" << endl;
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province C: Day " << v << ":";
+		cin >> ProvinceC[v];
+	}
+}
+
+void showTemperature(int* ProvinceA, int* ProvinceB, int* ProvinceC)
+
+{
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province A: Day " << v << "=" << ProvinceA[v] << endl;
+	}
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province B: Day " << v << "=" << ProvinceB[v] << endl;
+	}
+	for (int v = 1; v <= 7; ++v)
+	{
+		cout << "Province C: Day " << v << "=" << ProvinceC[v] << endl;
+	}
+}
+int main()
+{
+	int ProvinceA[7], ProvinceB[7], ProvinceC[7];
+	giveTemperature(ProvinceA, ProvinceB, ProvinceC);
+	cout << endl << "Displaying Values:" << endl;
+	cout << "" << endl;
+	showTemperature(ProvinceA, ProvinceB, ProvinceC);
+	cout << "" << endl;
+	cin.get();
+	cin.get();
+
+	_getch();
+	return 0;
+}
