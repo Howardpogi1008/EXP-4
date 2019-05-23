@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	double nums[10];
+	double smallest = 0;
+	double largest = 0;
+	double temp = 0;
+	double Total, average;
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "Enter 10 Numbers" << i +1 << ": ";
+	cin >> nums[i];
+	}
+	smallest = nums[0];
+	largest = nums[0];
+	for (int i = 1; i <= 10; i++)
+	{
+	temp = nums[i];
+	if (temp < smallest)
+	smallest = temp;
+	if (temp > largest)
+	largest = temp;	
+	}	
+	for (int i = 1; i <= 10; i++)
+	{
+	Total = Total + nums[i];
+	}
+	cout << endl;
+	cout << "ave: " << Total/10 << endl;	
+	cout << "total: "<< Total << endl;
+	cout << "smallest number : " << smallest << endl;
+	cout << "largest number : " << largest;
+
+	_getch();
+	return 0;
+	}
